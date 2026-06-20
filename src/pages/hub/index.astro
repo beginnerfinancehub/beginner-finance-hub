@@ -1,0 +1,30 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const articles = await getCollection('articles', ({ data }) => !data.draft);
+articles.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
+---
+
+<BaseLayout
+  title="Beginner Finance Hub"
+  description="A growing collection of calm, practical personal finance guides for beginners."
+>
+  <h1>Beginner Finance Hub</h1>
+  <p>A growing collection of calm, practical guides for anyone who wants to understand their money better.</p>
+
+  {articles.length === 0 ? (
+    <p>Articles coming soon.</p>
+  ) : (
+    <ul class="article-list">
+      {articles.map(article => (
+        <li>
+          <a href={`/articles/${article.slug}`}>
+            <h2>{article.data.title}</h2>
+            <p>{article.data.description}</p>
+          </a>
+        </li>
+      ))}
+    </ul>
+  )}
+</BaseLayout>

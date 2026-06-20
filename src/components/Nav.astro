@@ -1,0 +1,19 @@
+---
+const navLinks = [
+  { href: '/', label: 'Home' },
+  { href: '/start-here', label: 'Start Here' },
+  { href: '/hub', label: 'Beginner Finance Hub' },
+  { href: '/articles', label: 'Articles' },
+];
+---
+
+<div class="site-header-inner">
+  <a href="/" class="site-name">Beginner Finance Hub</a>
+  <nav class="site-nav">
+    <ul>
+      {navLinks.map(link => (
+        <li><a href={link.href}>{link.label}</a></li>
+      ))}
+    </ul>
+  </nav>
+</div>
