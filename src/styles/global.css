@@ -9,6 +9,7 @@
   --color-accent: #2a5c45;
   --color-border: #e0e0d8;
   --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, sans-serif;
+  --font-heading: 'Lora', Georgia, serif;
   --max-width: 680px;
 }
 
@@ -84,6 +85,8 @@ main {
 }
 
 h1 {
+  font-family: var(--font-heading);
+  font-weight: 600;
   font-size: 1.75rem;
   line-height: 1.3;
   margin-top: 0;
@@ -91,6 +94,8 @@ h1 {
 }
 
 h2 {
+  font-family: var(--font-heading);
+  font-weight: 600;
   font-size: 1.25rem;
   line-height: 1.4;
   margin-top: 2rem;
@@ -138,9 +143,17 @@ p {
   margin: 0 0 0.4rem;
 }
 
-.article-list time {
+.article-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 0.4rem;
   color: var(--color-muted);
   font-size: 0.85rem;
+}
+
+.article-meta time {
+  color: inherit;
 }
 
 /* Author byline */
@@ -201,4 +214,67 @@ article header time {
 .footer-nav a:hover {
   color: var(--color-accent);
   text-decoration: underline;
+}
+
+/* Callouts
+   Usage cap: max 1–2 callouts per article. Warnings are rare.
+   Syntax in markdown:
+     > [!KEY-TAKEAWAY]
+     > Content here.
+     > [!TIP]
+     > Content here.
+     > [!WARNING]
+     > Content here.
+*/
+.callout {
+  border-radius: 4px;
+  padding: 1rem 1.25rem;
+  margin: 1.75rem 0;
+  border-left: 3px solid;
+}
+
+.callout p:last-child {
+  margin-bottom: 0;
+}
+
+.callout::before {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  margin-bottom: 0.4rem;
+}
+
+/* Key Takeaway — green */
+.callout--key-takeaway {
+  background: #eef6f1;
+  border-left-color: var(--color-accent);
+}
+
+.callout--key-takeaway::before {
+  content: "Key Takeaway";
+  color: var(--color-accent);
+}
+
+/* Tip — calm blue-grey */
+.callout--tip {
+  background: #eef2f8;
+  border-left-color: #4a6fa5;
+}
+
+.callout--tip::before {
+  content: "Tip";
+  color: #4a6fa5;
+}
+
+/* Warning — muted amber (calm, not alarming) */
+.callout--warning {
+  background: #fdf6ed;
+  border-left-color: #b87c2a;
+}
+
+.callout--warning::before {
+  content: "Warning";
+  color: #b87c2a;
 }

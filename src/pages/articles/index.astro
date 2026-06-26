@@ -4,6 +4,10 @@ import { getCollection } from 'astro:content';
 
 const articles = await getCollection('articles', ({ data }) => !data.draft);
 articles.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
+
+function getReadTime(body: string) {
+  return Math.max(1, Math.ceil(body.trim().split(/\s+/).length / 200));
+}
 ---
 
 <BaseLayout
@@ -21,9 +25,13 @@ articles.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
           <a href={`/articles/${article.slug}`}>
             <h2>{article.data.title}</h2>
             <p>{article.data.description}</p>
-            <time datetime={article.data.pubDate.toISOString()}>
-              {article.data.pubDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
-            </time>
+            <div class="article-meta">
+              <time datetime={article.data.pubDate.toISOString()}>
+                {article.data.pubDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+              </time>
+              <span>·</span>
+              <span>{getReadTime(article.body)} min read</span>
+            </div>
           </a>
         </li>
       ))}
