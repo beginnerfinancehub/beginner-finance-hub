@@ -3,7 +3,7 @@ title: "How to Start Managing Your Money When It Feels Overwhelming"
 description: "The very first money move for beginners: find out what is coming in and what is going out. One hour, one exercise, more clarity than you have had in years."
 author: "John Cho"
 pubDate: 2026-06-20
-draft: false
+draft: true
 ---
 
 *This article is general education, not personalized financial advice. Every financial situation is different. If you are experiencing serious financial distress, please consider speaking with a nonprofit credit counselor or financial professional.*
