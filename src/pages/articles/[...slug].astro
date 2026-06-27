@@ -20,4 +20,8 @@ const readTime = Math.max(1, Math.ceil(article.body.trim().split(/\s+/).length /
   description={article.data.description}
   pubDate={article.data.pubDate}
   updatedDate={article.data.updatedDate}
-  re
+  readTime={readTime}
+  headings={headings}
+>
+  <Content />
+</ArticleLayout>

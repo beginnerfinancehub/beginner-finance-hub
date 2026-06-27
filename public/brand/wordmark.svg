@@ -13,4 +13,10 @@
   <text
     x="34"
     y="25"
-    font-family="Lora, Georgi
+    font-family="Lora, Georgia, serif"
+    font-weight="600"
+    font-size="18"
+    fill="currentColor"
+    dominant-baseline="auto"
+  >Beginner Finance Hub</text>
+</svg>

@@ -3,4 +3,9 @@
   <rect width="32" height="32" rx="6" fill="#2a5c45"/>
   <!-- Botanical sprout mark, white outline on green -->
   <!-- Stem -->
-  <path d="M16 28 L16 13" stroke
+  <path d="M16 28 L16 13" stroke="#fafaf8" stroke-width="2" stroke-linecap="round"/>
+  <!-- Left leaf: outline only -->
+  <path d="M16 22 C14 20 9 17 10 11 C14 12 17 17 16 22Z" fill="none" stroke="#fafaf8" stroke-width="1.6" stroke-linejoin="round"/>
+  <!-- Right leaf: outline only -->
+  <path d="M16 17 C18 15 23 12 22 6 C18 7 15 12 16 17Z" fill="none" stroke="#fafaf8" stroke-width="1.6" stroke-linejoin="round"/>
+</svg>

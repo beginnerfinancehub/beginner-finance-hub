@@ -5,3 +5,24 @@ interface Props {
   readTime?: number;
 }
 
+const { pubDate, updatedDate, readTime } = Astro.props;
+
+function formatDate(d: Date): string {
+  return d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+}
+---
+
+<div class="author-byline">
+  <p>
+    By <a href="/about">John Cho</a>
+    {pubDate && (
+      <> · Published <time datetime={pubDate.toISOString()}>{formatDate(pubDate)}</time></>
+    )}
+    {updatedDate && (
+      <> · Last reviewed <time datetime={updatedDate.toISOString()}>{formatDate(updatedDate)}</time></>
+    )}
+    {readTime && (
+      <> · {readTime} min read</>
+    )}
+  </p>
+</div>

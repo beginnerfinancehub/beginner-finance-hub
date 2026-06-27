@@ -218,16 +218,7 @@ article header time {
   text-decoration: underline;
 }
 
-/* Callouts
-   Usage cap: max 1–2 callouts per article. Warnings are rare.
-   Syntax in markdown:
-     > [!KEY-TAKEAWAY]
-     > Content here.
-     > [!TIP]
-     > Content here.
-     > [!WARNING]
-     > Content here.
-*/
+/* Callouts */
 .callout {
   border-radius: 4px;
   padding: 1rem 1.25rem;
@@ -248,7 +239,6 @@ article header time {
   margin-bottom: 0.4rem;
 }
 
-/* Key Takeaway — green */
 .callout--key-takeaway {
   background: #eef6f1;
   border-left-color: var(--color-accent);
@@ -259,7 +249,6 @@ article header time {
   color: var(--color-accent);
 }
 
-/* Tip — calm blue-grey */
 .callout--tip {
   background: #eef2f8;
   border-left-color: #4a6fa5;
@@ -270,10 +259,306 @@ article header time {
   color: #4a6fa5;
 }
 
-/* Warning — muted amber (calm, not alarming) */
 .callout--warning {
   background: #fdf6ed;
   border-left-color: #b87c2a;
 }
 
-.callout-
+.callout--warning::before {
+  content: "Warning";
+  color: #b87c2a;
+}
+
+/* Article TOC */
+.article-toc {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .article-toc {
+    display: block;
+    background: var(--color-section-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 2rem;
+    position: sticky;
+    top: 70px;
+  }
+}
+
+.article-toc-heading {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-muted);
+  margin: 0 0 0.75rem;
+}
+
+.article-toc ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.article-toc li {
+  margin-bottom: 0.4rem;
+}
+
+.article-toc a {
+  font-size: 0.9rem;
+  color: var(--color-text);
+  text-decoration: none;
+  line-height: 1.4;
+}
+
+.article-toc a:hover {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+
+/* Diagram callout */
+.diagram {
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: 1.5rem;
+  margin: 1.75rem 0;
+  background: var(--color-section-bg);
+  overflow-x: auto;
+}
+
+.diagram::after {
+  content: "Illustrative example \2014 not a recommendation.";
+  display: block;
+  margin-top: 0.75rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--color-border);
+  font-size: 0.8rem;
+  color: var(--color-muted);
+  font-style: italic;
+}
+
+.diagram-caption {
+  display: block;
+  margin-top: 0.6rem;
+  font-size: 0.8rem;
+  color: var(--color-muted);
+  font-style: italic;
+}
+
+/* Related articles strip */
+.related-articles {
+  border-top: 1px solid var(--color-border);
+  padding-top: 2rem;
+  margin-top: 3rem;
+}
+
+.related-articles h2 {
+  font-size: 1rem;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: var(--color-text);
+}
+
+.related-articles ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.related-articles a {
+  font-size: 0.95rem;
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+
+.related-articles a:hover {
+  text-decoration: none;
+}
+
+/* Email signup strip */
+.email-strip {
+  background: var(--color-section-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: 2rem 1.5rem;
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.email-strip h2 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  color: var(--color-text);
+}
+
+.email-strip p {
+  color: var(--color-muted);
+  font-size: 0.95rem;
+  margin-bottom: 1.25rem;
+}
+
+.email-strip-form {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.email-strip-input {
+  padding: 0.6rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  font-size: 0.95rem;
+  font-family: var(--font-body);
+  background: var(--color-bg);
+  color: var(--color-muted);
+  width: 220px;
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.email-strip-btn {
+  padding: 0.6rem 1.25rem;
+  background: var(--color-accent);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  font-family: var(--font-body);
+  font-weight: 600;
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.email-strip-note {
+  display: block;
+  margin-top: 0.75rem;
+  font-size: 0.8rem;
+  color: var(--color-muted);
+}
+
+/* Homepage hero */
+.hero {
+  padding: 4rem 0 3rem;
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: 3rem;
+}
+
+.hero h1 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.05rem;
+  color: var(--color-muted);
+  margin-bottom: 1.75rem;
+  max-width: 540px;
+}
+
+.hero-cta {
+  display: inline-block;
+  color: var(--color-accent);
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  border-bottom: 2px solid var(--color-accent);
+  padding-bottom: 1px;
+}
+
+.hero-cta:hover {
+  color: var(--color-secondary);
+  border-bottom-color: var(--color-secondary);
+}
+
+/* Homepage featured guides strip */
+.featured-guides {
+  background: var(--color-section-bg);
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+  padding: 2.5rem 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.featured-guides h2 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-muted);
+}
+
+.guides-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 600px) {
+  .guides-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+.guide-card {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: 1.25rem;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: border-color 0.15s;
+}
+
+.guide-card:hover {
+  border-color: var(--color-accent);
+  text-decoration: none;
+}
+
+.guide-card h3 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1rem;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: var(--color-text);
+  line-height: 1.4;
+}
+
+.guide-card p {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+}
+
+.guide-card-meta {
+  font-size: 0.8rem;
+  color: var(--color-muted);
+}
+
+/* Wordmark in Nav */
+.site-wordmark {
+  display: block;
+  height: 28px;
+  width: auto;
+}

@@ -16,3 +16,50 @@ function readTime(body: string): number {
   return Math.max(1, Math.ceil(body.trim().split(/\s+/).length / 200));
 }
 ---
+
+<BaseLayout
+  title="Home"
+  description="Calm, practical personal finance for beginners who don't know where to start."
+>
+  <section class="hero">
+    <h1>Personal finance, without the jargon</h1>
+    <p>Clear guides on budgeting, saving, and how money actually works — written for people who are starting from scratch.</p>
+    <a href="/start-here" class="hero-cta">Start Here &rarr;</a>
+  </section>
+
+  {featured.length > 0 && (
+    <section class="featured-guides" aria-label="Featured guides">
+      <h2>Featured guides</h2>
+      <div class="guides-grid">
+        {featured.map(article => (
+          <a href={`/articles/${article.slug}`} class="guide-card">
+            <h3>{article.data.title}</h3>
+            {article.data.description && (
+              <p>{article.data.description}</p>
+            )}
+            <span class="guide-card-meta">
+              {formatDate(article.data.pubDate)}
+              {' · '}{readTime(article.body)} min read
+            </span>
+          </a>
+        ))}
+      </div>
+    </section>
+  )}
+
+  <div class="email-strip">
+    <h2>New guides, delivered free</h2>
+    <p>Plain-English personal finance, one guide at a time. No spam, no advice.</p>
+    <div class="email-strip-form" aria-hidden="true">
+      <input
+        class="email-strip-input"
+        type="email"
+        placeholder="your@email.com"
+        disabled
+        aria-label="Email address (signup not yet active)"
+      />
+      <button class="email-strip-btn" type="button" disabled>Send me guides</button>
+    </div>
+    <span class="email-strip-note">Coming soon.</span>
+  </div>
+</BaseLayout>

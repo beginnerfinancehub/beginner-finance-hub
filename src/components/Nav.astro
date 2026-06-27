@@ -7,9 +7,20 @@ const navLinks = [
 ---
 
 <div class="site-header-inner">
-  <!-- AC-11: wordmark replaces plain text .site-name span; alt text per spec -->
   <a href="/" class="site-name" aria-label="Beginner Finance Hub home">
     <img
       src="/brand/wordmark.svg"
       alt="Beginner Finance Hub"
-      class="site-wordma
+      class="site-wordmark"
+      width="220"
+      height="28"
+    />
+  </a>
+  <nav class="site-nav">
+    <ul>
+      {navLinks.map(link => (
+        <li><a href={link.href}>{link.label}</a></li>
+      ))}
+    </ul>
+  </nav>
+</div>
