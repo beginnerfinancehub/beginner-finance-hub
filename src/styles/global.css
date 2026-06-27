@@ -8,6 +8,8 @@
   --color-muted: #666666;
   --color-accent: #2a5c45;
   --color-border: #e0e0d8;
+  --color-secondary: #3d7d7a;
+  --color-section-bg: #edf4f3;
   --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, sans-serif;
   --font-heading: 'Lora', Georgia, serif;
   --max-width: 680px;
@@ -274,7 +276,4 @@ article header time {
   border-left-color: #b87c2a;
 }
 
-.callout--warning::before {
-  content: "Warning";
-  color: #b87c2a;
-}
+.callout-

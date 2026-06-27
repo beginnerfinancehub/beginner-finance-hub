@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 290 36" fill="none" style="color: #2a5c45" aria-label="Beginner Finance Hub">
+  <title>Beginner Finance Hub</title>
+  <!-- Mark (sprout), scaled to 28px height, anchored top-left -->
+  <g transform="translate(0, 4) scale(0.875)">
+    <!-- Stem -->
+    <path d="M16 28 L16 11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+    <!-- Left leaf: outline only -->
+    <path d="M16 22 C14 20 9 17 10 11 C14 12 17 17 16 22Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+    <!-- Right leaf: outline only -->
+    <path d="M16 17 C18 15 23 12 22 6 C18 7 15 12 16 17Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+  </g>
+  <!-- Wordmark text: Lora 600, falls back to Georgia serif -->
+  <text
+    x="34"
+    y="25"
+    font-family="Lora, Georgi

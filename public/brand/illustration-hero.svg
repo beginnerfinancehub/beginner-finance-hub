@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 240" fill="none" aria-hidden="true">
+  <title>Illustration: person reading at a desk with a plant nearby</title>
+
+  <!-- Desk surface -->
+  <rect x="60" y="160" width="320" height="8" rx="2" stroke="#2a5c45" stroke-width="1.5"/>
+  <!-- Desk left leg -->
+  <line x1="90" y1="168" x2="90" y2="210" stroke="#2a5c45" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Desk right leg -->
+  <line x1="350" y1="168" x2="350" y2="210" stroke="#2a5c45" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- Chair seat -->
+  <rect x="140" y="178" width="90" height="6" rx="2" stroke="#2a5c45" stroke-width="1.5"/>
+  <!-- Chair back -->
+  <rect x="140" y="140" width="8" height="42" rx="2" stroke="#2a5c45" stroke-width="1.5"/>
+  <!-- Chair legs -->
+  <line x1="148" y1="184" x2="130" y2="210" stroke="#2a5c45" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="230" y1="184" x2="248" y2="210" stroke="#2a5c45" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- Person: head (circle) -->
+  <circle cx="195" cy="118" r="16" stroke="#2a5c45" stroke-width="1.5"/>
+  <!-- Person: body/torso -->
+  <path d="M180 134 C178 148 176 158 178 162" stroke="#2a5c45" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M210 134 C212 148 214 158 212 162" stroke="#2a5c45" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M178 162 L212 162" stroke="#2a5c45" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Arms resting on desk -->
+  <path d="M178 152 C170 154 160 158 150 158" stroke="#2a5c45" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M212 152 C220 154 240 158 250 158" stroke="#2a5c45" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- Open book on desk -->
+  <path d="M148 158 L148 142 C165 138 190 140 200 142 L200 158 C188 155 162 155 148 158Z" stroke="#2a5c45" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M200 158 L200 142 C210 138 235 138 252 142 L252 158 C238 155 214 155 200 158Z" stroke="#3d7d7a" stroke-width="1.5" stroke-linejoin="round"/>
+  <!-- Book spine -->
+  <line x1="200" y1="142" x2="200" y2="158" stroke="#2a5c45" stroke-width="1.5"/>
+  <!-- Book text lines (left page) -->
+  <line x1="158" y1="147" x2="192" y2="147" stroke="#3d7d7a" stroke-width="1" stroke-linecap="round" opacity="0.6"/>
+  <line x1="158" y1="152" x2="188" y2="152" stroke="#3d7d7a" stroke-width="1" stroke-linecap="round" opacity="0.6"/>
+  <!-- Book text lines (right page) -->
+  <line x1="208" y1="147" x2="242" y2="147" stroke="#3d7d7a" stroke-width="1" stroke-linecap="round" opacity="0.6"/>
+  <line x1="208" y1="152" x2="238" y2="152" stroke="#3d7d7a" stroke-width="1" stroke-linecap="round" opacity="0.6"/>
+
+  <!-- Mug on desk (right side) -->
+  <rect x="300" y="144" width="22" height="18" rx="2" stroke="#3d7d7a" stroke-width="1.5"/>
+  <!-- Mug handle -->
+  <path d="M322 148 C330 148 330 158 322 158" stroke="#3d7d7a" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Steam -->
+  <path d="M306 140 C305 136 307 133 306 130" stroke="#3d7d7a" stroke-width="1.2" stroke-linecap="round" opacity="0.7"/>
+  <path d="M313 140 C312 136 314 133 313 130" stroke="#3d7d7a" stroke-width="1.2" stroke-linecap="round" opacity="0.7"/>
+
+  <!-- Plant pot (left side of desk) -->
+  <path d="M86 158 L78 172 L102 172 L94 158Z" stroke="#2a5c45" stroke-width="1.5" stroke-linejoin="round"/>
+  <!-- Pot rim -->
+  <line x1="84" y1="158" x2="96" y2="158" stroke="#2a5c45" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Plant stem -->
+  <path d="M90 158 L90 130" stroke="#2a5c45" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Leaf left -->
+  <path d="M90 145 C84 142 74 138 72 130 C80 130 88 136 90 145Z" fill="#3d7d7a" stroke="#3d7d7a" stroke-width="0.5"/>
+  <!-- Leaf right -->
+  <path d="M90 138 C96 135 106 131 108 123 C100 123 92 129 90 138Z" fill="#2a5c45" stroke="#2a5c45" stroke-width="0.5"/>
+  <!-- Leaf top -->
+  <path d="M90 130 C88 124 84 118 82 112 C88 114 92 120 90 130Z" fill="#3d7d7a" stroke="#3d7d7a" stroke-width="0.5"/>
+
+  <!-- Small stacked books on desk (far right) -->
+  <rect x="360" y="148" width="40" height="6" rx="1" stroke="#3d7d7a" stroke-width="1.5"/>
+  <rect x="358" y="154" width="44" height="6" rx="1" stroke="#2a5c45" stroke-width="1.5"/>
+
+  <!-- Window light: subtle arch in background -->
+  <path d="M390 80 L390 40 C390 28 410 20 430 20 C450 20 470 28 470 40 L470 80Z" stroke="#3d7d7a" stroke-width="1.5" opacity="0.35"/>
+  <line x1="430" y1="20" x2="430" y2="80" stroke="#3d7d7a" stroke-width="1" opacity="0.35"/>
+  <line x1="390" y1="50" x2="470" y2="50" stroke="#3d7d7a" stroke-width="1" opacity="0.35"/>
+</svg>

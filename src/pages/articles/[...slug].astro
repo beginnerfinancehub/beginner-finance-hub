@@ -11,7 +11,7 @@ export async function getStaticPaths() {
 }
 
 const { article } = Astro.props;
-const { Content } = await article.render();
+const { Content, headings } = await article.render();
 const readTime = Math.max(1, Math.ceil(article.body.trim().split(/\s+/).length / 200));
 ---
 
@@ -19,7 +19,5 @@ const readTime = Math.max(1, Math.ceil(article.body.trim().split(/\s+/).length /
   title={article.data.title}
   description={article.data.description}
   pubDate={article.data.pubDate}
-  readTime={readTime}
->
-  <Content />
-</ArticleLayout>
+  updatedDate={article.data.updatedDate}
+  re

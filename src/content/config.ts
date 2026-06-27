@@ -6,9 +6,10 @@ const articles = defineCollection({
     title: z.string(),
     description: z.string(),
     pubDate: z.date(),
+    updatedDate: z.date().optional(),
     author: z.string().default('John Cho'),
     draft: z.boolean().default(false),
   }),
 });
 
-export const collections = { articles };
+exp
