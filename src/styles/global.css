@@ -269,22 +269,14 @@ article header time {
   color: #b87c2a;
 }
 
-/* Article TOC */
+/* Article TOC — inline, non-sticky (single-column layout; sticky causes overlay) */
 .article-toc {
-  display: none;
-}
-
-@media (min-width: 768px) {
-  .article-toc {
-    display: block;
-    background: var(--color-section-bg);
-    border: 1px solid var(--color-border);
-    border-radius: 4px;
-    padding: 1rem 1.25rem;
-    margin-bottom: 2rem;
-    position: sticky;
-    top: 70px;
-  }
+  display: block;
+  background: var(--color-section-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 2rem;
 }
 
 .article-toc-heading {
