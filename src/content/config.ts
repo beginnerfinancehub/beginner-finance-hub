@@ -12,4 +12,4 @@ const articles = defineCollection({
   }),
 });
 
-exp
+export const collections = { articles };ort const collections = { articles };
