@@ -340,6 +340,38 @@ article header time {
   font-style: italic;
 }
 
+/* In-body chart figure */
+.chart-figure {
+  margin: 1.75rem 0;
+}
+
+.chart-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: #ffffff;
+  padding: 0.75rem;
+}
+
+.chart-figure figcaption {
+  margin-top: 0.6rem;
+  font-size: 0.8rem;
+  color: var(--color-muted);
+  font-style: italic;
+  text-align: center;
+}
+
+/* Optional featured image at top of an article */
+.article-hero {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
 /* Related articles strip */
 .related-articles {
   border-top: 1px solid var(--color-border);
@@ -518,39 +550,4 @@ article header time {
   text-decoration: none;
   color: inherit;
   display: block;
-  transition: border-color 0.15s;
-}
-
-.guide-card:hover {
-  border-color: var(--color-accent);
-  text-decoration: none;
-}
-
-.guide-card h3 {
-  font-family: var(--font-heading);
-  font-weight: 600;
-  font-size: 1rem;
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-  color: var(--color-text);
-  line-height: 1.4;
-}
-
-.guide-card p {
-  font-size: 0.85rem;
-  color: var(--color-muted);
-  margin-bottom: 0.75rem;
-  line-height: 1.5;
-}
-
-.guide-card-meta {
-  font-size: 0.8rem;
-  color: var(--color-muted);
-}
-
-/* Wordmark in Nav */
-.site-wordmark {
-  display: block;
-  height: 28px;
-  width: auto;
-}
+  transition: border-color 0

@@ -22,6 +22,10 @@ const readTime = Math.max(1, Math.ceil(article.body.trim().split(/\s+/).length /
   updatedDate={article.data.updatedDate}
   readTime={readTime}
   headings={headings}
+  image={article.data.image}
+  imageAlt={article.data.imageAlt}
+  ogImage={article.data.ogImage}
+  faq={article.data.faq}
 >
   <Content />
 </ArticleLayout>

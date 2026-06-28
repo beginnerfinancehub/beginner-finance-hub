@@ -14,6 +14,11 @@ interface RelatedArticle {
   url: string;
 }
 
+interface FaqItem {
+  q: string;
+  a: string;
+}
+
 interface Props {
   title: string;
   description?: string;
@@ -22,6 +27,10 @@ interface Props {
   readTime?: number;
   headings?: Heading[];
   relatedArticles?: RelatedArticle[];
+  image?: string;
+  imageAlt?: string;
+  ogImage?: string;
+  faq?: FaqItem[];
 }
 
 const {
@@ -32,6 +41,10 @@ const {
   readTime,
   headings = [],
   relatedArticles = [],
+  image,
+  imageAlt,
+  ogImage,
+  faq,
 } = Astro.props;
 
 // Only render TOC when there are 2+ H2 headings (AC-5)
@@ -39,9 +52,10 @@ const h2Headings = headings.filter(h => h.depth === 2);
 const showToc = h2Headings.length >= 2;
 ---
 
-<BaseLayout title={title} description={description}>
+<BaseLayout title={title} description={description} ogImage={ogImage ?? image} faq={faq}>
   <article>
     <header>
+      {image && <img class="article-hero" src={image} alt={imageAlt ?? ''} width="1200" height="630" loading="eager" />}
       <h1>{title}</h1>
       <AuthorByline pubDate={pubDate} updatedDate={updatedDate} readTime={readTime} />
     </header>

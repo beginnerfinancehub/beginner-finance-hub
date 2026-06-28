@@ -4,6 +4,16 @@ description: "The very first money move for beginners: find out what is coming i
 author: "John Cho"
 pubDate: 2026-06-20
 draft: false
+ogImage: "/images/og/article-01.png"
+faq:
+  - q: "Where do I start if I have never tracked my money before?"
+    a: "Open your bank app and read last month's transactions, line by line. You are not budgeting yet. You are only seeing what is there. That single hour is the whole first step."
+  - q: "What if I have debt and no savings?"
+    a: "Start the same way. Seeing the full picture matters more when money is tight, not less. Once you know what comes in and what goes out, you can decide your next move from facts instead of fear."
+  - q: "Do I need an app, or is a notebook fine?"
+    a: "Either works. The tool you will actually use is the right tool. Free apps connect to your bank and sort transactions for you. A notebook or a free spreadsheet works just as well if you would rather go slow."
+  - q: "How long does this take?"
+    a: "About an hour for one month of transactions. You do not have to do a full year right away. Start with one month and come back for the rest later."
 ---
 
 *This article is general education, not personalized financial advice. Every financial situation is different. If you are experiencing serious financial distress, please consider speaking with a nonprofit credit counselor or financial professional.*
@@ -19,6 +29,8 @@ Here is the good news: there is one move that cuts through all of it. Not a budg
 Find out what is coming in and what is going out.
 
 That is it. That is the whole first step.
+
+> **The one move:** Before any budget, account, or plan, find out what comes in and what goes out each month. One hour of honest looking gives you more clarity than years of worrying.
 
 ---
 
@@ -43,6 +55,19 @@ The first is what comes in each month. This is your income after taxes, meaning 
 The second is what goes out each month. This includes everything: rent or mortgage, groceries, subscriptions, gas, eating out, online shopping, coffee, the gym membership you forgot about. Everything.
 
 You are not judging any of it yet. You are just looking. The only job right now is to see the full picture.
+
+Here is what one month can look like once you lay it out. These numbers are made up. Yours will be different, and that is the whole point: the value is in seeing your own.
+
+| One example month | Amount |
+|---|---|
+| Money coming in (after tax) | $3,200 |
+| Housing | $1,150 |
+| Food | $520 |
+| Transportation | $260 |
+| Subscriptions | $85 |
+| Everything else | $640 |
+| Total going out | $2,655 |
+| What is left | $545 |
 
 ---
 
@@ -82,6 +107,11 @@ Once you have done one month, you will probably want to go further, and that ins
 
 A single month can miss things. Quarterly subscriptions only appear every three months. Holiday gift spending only shows up in November and December. A summer vacation is a once-a-year event. If you only look at January, you might think you spend nothing on gifts or travel, when in reality those costs are real and they are coming.
 
+<figure class="chart-figure">
+  <img src="/images/article-01-spending-by-month.svg" alt="Bar chart of one example year of monthly spending. Most months sit near a dashed monthly-average line, with a taller green bar in July labelled vacation and taller green bars in November and December labelled holidays." />
+  <figcaption>A year of one person's spending. Most months hug the average, then summer travel and the holidays push it up. Numbers are illustrative.</figcaption>
+</figure>
+
 Looking at a full year of spending shows you the seasonality of your own financial life. It turns a snapshot into a map. That is when the picture becomes genuinely useful for planning.
 
 You do not have to do this all at once. Start with one month. Come back later for the rest.
@@ -116,6 +146,26 @@ That is the whole step.
 
 ---
 
+## Common Questions
+
+### Where do I start if I have never tracked my money before?
+
+Open your bank app and read last month's transactions, line by line. You are not budgeting yet. You are only seeing what is there. That single hour is the whole first step.
+
+### What if I have debt and no savings?
+
+Start the same way. Seeing the full picture matters more when money is tight, not less. Once you know what comes in and what goes out, you can decide your next move from facts instead of fear.
+
+### Do I need an app, or is a notebook fine?
+
+Either works. The tool you will actually use is the right tool. Free apps connect to your bank and sort transactions for you. A notebook or a free spreadsheet works just as well if you would rather go slow.
+
+### How long does this take?
+
+About an hour for one month of transactions. You do not have to do a full year right away. Start with one month and come back for the rest later.
+
+---
+
 ## Resources
 
 These tools can help you track your income and spending. None of these are endorsements, and this site has no financial relationship with any of them. They are starting points.
@@ -127,4 +177,4 @@ These tools can help you track your income and spending. None of these are endor
 
 ---
 
-*John Cho is the founder of BeginnerFinanceHub.com, a resource for people who are new to personal finance and want a calm, clear place to start. [Learn more about John →](/about)*
+*John Cho is the founder of BeginnerFinanceHub.com, a resource for people who are new to personal finance and want a calm, clear place to start. [Learn more about John](/about)*

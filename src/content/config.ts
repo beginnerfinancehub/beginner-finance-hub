@@ -9,6 +9,10 @@ const articles = defineCollection({
     updatedDate: z.date().optional(),
     author: z.string().default('John Cho'),
     draft: z.boolean().default(false),
+    image: z.string().optional(),
+    imageAlt: z.string().optional(),
+    ogImage: z.string().optional(),
+    faq: z.array(z.object({ q: z.string(), a: z.string() })).optional(),
   }),
 });
 
