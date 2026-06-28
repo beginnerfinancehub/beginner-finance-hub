@@ -13,6 +13,7 @@ interface Props {
   description?: string;
   ogImage?: string;
   faq?: FaqItem[];
+  wideLayout?: boolean;
 }
 
 const {
@@ -20,6 +21,7 @@ const {
   description = 'Calm, practical personal finance for beginners.',
   ogImage,
   faq,
+  wideLayout = false,
 } = Astro.props;
 
 const ogImageUrl = new URL(ogImage ?? '/images/og/default.png', Astro.site).href;
@@ -68,7 +70,7 @@ const faqJsonLd = faq && faq.length
     <header class="site-header">
       <Nav />
     </header>
-    <main>
+    <main class:list={[{ wide: wideLayout }]}>
       <slot />
     </main>
     <Footer />
