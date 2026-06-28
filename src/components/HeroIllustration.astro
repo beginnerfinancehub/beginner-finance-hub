@@ -2,26 +2,31 @@
 ---
 <svg class="hero-illustration" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 240" fill="none" aria-hidden="true">
   <style>
-    .plant-leaf-anim { opacity: 0; }
-    .plant-leaf-3 { animation: plantLeafGrow .45s ease-out .6s forwards; }
-    .plant-leaf-4 { animation: plantLeafGrow .45s ease-out 1.1s forwards; }
-    .plant-leaf-5 { animation: plantLeafGrow .45s ease-out 1.6s forwards; }
-    @keyframes plantLeafGrow { from { opacity: 0; } to { opacity: 1; } }
+    .lf { opacity: 0; }
+    .lf3 { animation: lfg .45s ease-out .5s forwards; }
+    .lf4 { animation: lfg .45s ease-out 1.0s forwards; }
+    .lf5 { animation: lfg .45s ease-out 1.5s forwards; }
+    @keyframes lfg { from { opacity: 0; } to { opacity: 1; } }
+    .sg { stroke-dashoffset: var(--d); animation: sgr .35s ease-out var(--t) forwards; }
+    @keyframes sgr { to { stroke-dashoffset: 0; } }
   </style>
+
   <!-- Desk surface -->
   <rect x="60" y="160" width="320" height="8" rx="2" stroke="#2a5c45" stroke-width="1.5"/>
   <!-- Desk legs -->
   <line x1="90" y1="168" x2="90" y2="210" stroke="#2a5c45" stroke-width="1.5" stroke-linecap="round"/>
   <line x1="350" y1="168" x2="350" y2="210" stroke="#2a5c45" stroke-width="1.5" stroke-linecap="round"/>
+
   <!-- Person: head -->
   <circle cx="195" cy="118" r="16" stroke="#2a5c45" stroke-width="1.5"/>
-  <!-- Person: torso ends at desk level -->
+  <!-- Person: torso -->
   <path d="M180 134 C178 146 176 156 178 160" stroke="#2a5c45" stroke-width="1.5" stroke-linecap="round"/>
   <path d="M210 134 C212 146 214 156 212 160" stroke="#2a5c45" stroke-width="1.5" stroke-linecap="round"/>
   <path d="M178 160 L212 160" stroke="#2a5c45" stroke-width="1.5" stroke-linecap="round"/>
-  <!-- Person: arms resting on book -->
+  <!-- Person: arms -->
   <path d="M178 150 C170 153 160 156 150 158" stroke="#2a5c45" stroke-width="1.5" stroke-linecap="round"/>
   <path d="M212 150 C220 153 240 156 252 158" stroke="#2a5c45" stroke-width="1.5" stroke-linecap="round"/>
+
   <!-- Open book -->
   <path d="M148 158 L148 142 C165 138 190 140 200 142 L200 158 C188 155 162 155 148 158Z" stroke="#2a5c45" stroke-width="1.5" stroke-linejoin="round"/>
   <path d="M200 158 L200 142 C210 138 235 138 252 142 L252 158 C238 155 214 155 200 158Z" stroke="#3d7d7a" stroke-width="1.5" stroke-linejoin="round"/>
@@ -30,24 +35,39 @@
   <line x1="158" y1="152" x2="188" y2="152" stroke="#3d7d7a" stroke-width="1" stroke-linecap="round" opacity="0.6"/>
   <line x1="208" y1="147" x2="242" y2="147" stroke="#3d7d7a" stroke-width="1" stroke-linecap="round" opacity="0.6"/>
   <line x1="208" y1="152" x2="238" y2="152" stroke="#3d7d7a" stroke-width="1" stroke-linecap="round" opacity="0.6"/>
+
   <!-- Mug -->
   <rect x="300" y="144" width="22" height="18" rx="2" stroke="#3d7d7a" stroke-width="1.5"/>
   <path d="M322 148 C330 148 330 158 322 158" stroke="#3d7d7a" stroke-width="1.5" stroke-linecap="round"/>
   <path d="M306 140 C305 136 307 133 306 130" stroke="#3d7d7a" stroke-width="1.2" stroke-linecap="round" opacity="0.7"/>
   <path d="M313 140 C312 136 314 133 313 130" stroke="#3d7d7a" stroke-width="1.2" stroke-linecap="round" opacity="0.7"/>
-  <!-- Stacked books fully on desk -->
+
+  <!-- Stacked books -->
   <rect x="336" y="148" width="38" height="6" rx="1" stroke="#3d7d7a" stroke-width="1.5"/>
   <rect x="334" y="154" width="42" height="6" rx="1" stroke="#2a5c45" stroke-width="1.5"/>
-  <!-- Plant pot sitting on desk surface (bottom at y=160) -->
+
+  <!-- Plant pot -->
   <path d="M84 144 L78 160 L102 160 L96 144 Z" stroke="#2a5c45" stroke-width="1.5" stroke-linejoin="round"/>
   <line x1="84" y1="144" x2="96" y2="144" stroke="#2a5c45" stroke-width="1.5" stroke-linecap="round"/>
-  <!-- Plant stem -->
-  <path d="M90 144 L90 86" stroke="#2a5c45" stroke-width="1.5" stroke-linecap="round"/>
-  <!-- Leaves 1 & 2: visible from start -->
+
+  <!-- Stem: base always visible (pot rim to leaf 2) -->
+  <line x1="90" y1="144" x2="90" y2="120" stroke="#2a5c45" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Stem segment: grows with leaf 3 -->
+  <line x1="90" y1="120" x2="90" y2="112" stroke="#2a5c45" stroke-width="1.5" stroke-linecap="round"
+    class="sg" style="--d:8px;--t:0.5s;stroke-dasharray:8;"/>
+  <!-- Stem segment: grows with leaf 4 -->
+  <line x1="90" y1="112" x2="90" y2="103" stroke="#2a5c45" stroke-width="1.5" stroke-linecap="round"
+    class="sg" style="--d:9px;--t:1.0s;stroke-dasharray:9;"/>
+  <!-- Stem segment: grows with leaf 5 -->
+  <line x1="90" y1="103" x2="90" y2="86" stroke="#2a5c45" stroke-width="1.5" stroke-linecap="round"
+    class="sg" style="--d:17px;--t:1.5s;stroke-dasharray:17;"/>
+
+  <!-- Leaves 1 & 2: always visible (like logo) -->
   <path d="M90 130 C87 127 80 124 78 116 C85 117 91 123 90 130Z" fill="#3d7d7a" stroke="#3d7d7a" stroke-width="0.5"/>
   <path d="M90 120 C93 117 100 114 102 106 C96 106 90 112 90 120Z" fill="#2a5c45" stroke="#2a5c45" stroke-width="0.5"/>
-  <!-- Leaves 3-5: animated sprout, then stops -->
-  <path class="plant-leaf-anim plant-leaf-3" d="M90 112 C87 109 80 106 78 98 C85 99 91 105 90 112Z" fill="#3d7d7a" stroke="#3d7d7a" stroke-width="0.5"/>
-  <path class="plant-leaf-anim plant-leaf-4" d="M90 103 C93 100 100 97 102 89 C96 89 90 95 90 103Z" fill="#2a5c45" stroke="#2a5c45" stroke-width="0.5"/>
-  <path class="plant-leaf-anim plant-leaf-5" d="M90 95 C88 89 86 83 88 77 C93 79 94 86 90 95Z" fill="#3d7d7a" stroke="#3d7d7a" stroke-width="0.5"/>
+
+  <!-- Leaves 3–5: animate in with stem -->
+  <path class="lf lf3" d="M90 112 C87 109 80 106 78 98 C85 99 91 105 90 112Z" fill="#3d7d7a" stroke="#3d7d7a" stroke-width="0.5"/>
+  <path class="lf lf4" d="M90 103 C93 100 100 97 102 89 C96 89 90 95 90 103Z" fill="#2a5c45" stroke="#2a5c45" stroke-width="0.5"/>
+  <path class="lf lf5" d="M90 95 C88 89 86 83 88 77 C93 79 94 86 90 95Z" fill="#3d7d7a" stroke="#3d7d7a" stroke-width="0.5"/>
 </svg>
