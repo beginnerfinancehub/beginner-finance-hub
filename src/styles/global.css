@@ -595,7 +595,7 @@ article header time {
 
   .article-layout {
     display: grid;
-    grid-template-columns: 240px 1fr;
+    grid-template-columns: 1fr 240px;
     gap: 0 3rem;
     align-items: start;
   }
