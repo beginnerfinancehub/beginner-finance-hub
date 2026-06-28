@@ -20,13 +20,10 @@ function readTime(body: string): number {
 <BaseLayout
   title="Home"
   description="Calm, practical personal finance for beginners who don't know where to start."
+  heroIsH1={true}
+  heroCtaText="Start Here →"
+  heroCtaUrl="/start-here"
 >
-  <section class="hero">
-    <h1>Personal finance, without the jargon</h1>
-    <p>Clear guides on budgeting, saving, and how money actually works — written for people who are starting from scratch.</p>
-    <a href="/start-here" class="hero-cta">Start Here &rarr;</a>
-  </section>
-
   {featured.length > 0 && (
     <section class="featured-guides" aria-label="Featured guides">
       <h2>Featured guides</h2>

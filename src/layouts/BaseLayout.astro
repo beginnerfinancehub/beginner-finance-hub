@@ -1,6 +1,7 @@
 ---
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
+import HeroIllustration from '../components/HeroIllustration.astro';
 import '../styles/global.css';
 
 interface FaqItem {
@@ -14,6 +15,9 @@ interface Props {
   ogImage?: string;
   faq?: FaqItem[];
   wideLayout?: boolean;
+  heroIsH1?: boolean;
+  heroCtaText?: string;
+  heroCtaUrl?: string;
 }
 
 const {
@@ -22,7 +26,13 @@ const {
   ogImage,
   faq,
   wideLayout = false,
+  heroIsH1 = false,
+  heroCtaText = 'Start Here →',
+  heroCtaUrl = '/start-here',
 } = Astro.props;
+
+const HERO_TITLE = 'Personal finance, without the jargon';
+const HERO_SUB = 'Clear guides on budgeting, saving, and how money actually works — written for people starting from scratch.';
 
 const ogImageUrl = new URL(ogImage ?? '/images/og/default.png', Astro.site).href;
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site).href;
@@ -70,6 +80,23 @@ const faqJsonLd = faq && faq.length
     <header class="site-header">
       <Nav />
     </header>
+
+    <section class="site-hero">
+      <div class="site-hero-inner">
+        <div class="site-hero-text">
+          {heroIsH1
+            ? <h1 class="hero-headline">{HERO_TITLE}</h1>
+            : <p class="hero-headline">{HERO_TITLE}</p>
+          }
+          <p class="hero-sub">{HERO_SUB}</p>
+          <a href={heroCtaUrl} class="hero-cta">{heroCtaText}</a>
+        </div>
+        <div class="site-hero-illo">
+          <HeroIllustration />
+        </div>
+      </div>
+    </section>
+
     <main class:list={[{ wide: wideLayout }]}>
       <slot />
     </main>

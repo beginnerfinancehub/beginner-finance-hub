@@ -269,7 +269,7 @@ article header time {
   color: #b87c2a;
 }
 
-/* Article TOC — inline, non-sticky (single-column layout; sticky causes overlay) */
+/* Article TOC */
 .article-toc {
   display: block;
   background: var(--color-section-bg);
@@ -363,7 +363,7 @@ article header time {
   text-align: center;
 }
 
-/* Optional featured image at top of an article */
+/* Article hero image */
 .article-hero {
   display: block;
   width: 100%;
@@ -472,27 +472,39 @@ article header time {
   color: var(--color-muted);
 }
 
-/* Homepage hero */
-.hero {
-  padding: 4rem 0 3rem;
+/* Site-wide hero (text + illustration, every page) */
+.site-hero {
   border-bottom: 1px solid var(--color-border);
-  margin-bottom: 3rem;
+  padding: 3rem 1.5rem;
 }
 
-.hero h1 {
+.site-hero-inner {
+  max-width: 860px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.site-hero-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.hero-headline {
   font-family: var(--font-heading);
   font-weight: 600;
-  font-size: 2.5rem;
+  font-size: 2.25rem;
   line-height: 1.2;
-  margin-top: 0;
-  margin-bottom: 1rem;
+  margin: 0 0 1rem;
+  color: var(--color-text);
 }
 
-.hero p {
+.hero-sub {
   font-size: 1.05rem;
   color: var(--color-muted);
   margin-bottom: 1.75rem;
-  max-width: 540px;
+  max-width: 420px;
 }
 
 .hero-cta {
@@ -508,6 +520,33 @@ article header time {
 .hero-cta:hover {
   color: var(--color-secondary);
   border-bottom-color: var(--color-secondary);
+}
+
+.site-hero-illo {
+  flex-shrink: 0;
+}
+
+.hero-illustration {
+  display: block;
+  width: 240px;
+  height: auto;
+}
+
+@media (max-width: 680px) {
+  .site-hero-inner {
+    flex-direction: column-reverse;
+    gap: 1.5rem;
+  }
+  .site-hero-illo {
+    align-self: center;
+  }
+  .hero-illustration {
+    width: 100%;
+    max-width: 280px;
+  }
+  .hero-sub {
+    max-width: none;
+  }
 }
 
 /* Homepage featured guides strip */
@@ -550,7 +589,31 @@ article header time {
   text-decoration: none;
   color: inherit;
   display: block;
-  transition: border-color 0
+  transition: border-color 0.15s ease;
+}
+
+.guide-card:hover {
+  border-color: var(--color-accent);
+}
+
+.guide-card h3 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1rem;
+  margin: 0 0 0.4rem;
+  color: var(--color-text);
+}
+
+.guide-card p {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  margin: 0 0 0.6rem;
+}
+
+.guide-card-meta {
+  font-size: 0.8rem;
+  color: var(--color-muted);
+}
 
 /* Article body tables */
 .article-body table {
@@ -575,7 +638,6 @@ article header time {
   border-bottom: 2px solid var(--color-border);
 }
 
-/* Right-align the second column (amounts, values) */
 .article-body td:last-child,
 .article-body th:last-child {
   text-align: right;
